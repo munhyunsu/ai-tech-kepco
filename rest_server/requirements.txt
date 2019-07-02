@@ -1,0 +1,8 @@
+# for upgrade
+pip
+setuptools
+
+# RESTful API
+flask
+flask-restful
+
