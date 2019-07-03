@@ -4,6 +4,9 @@ from flask_restful import Resource, Api, reqparse
 app = Flask(__name__)
 api = Api(app)
 
+DRESPONSE = {
+}
+
 class ClientInfo(Resource):
     def post(self):
         data = request.get_json()
