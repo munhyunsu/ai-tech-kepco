@@ -5,13 +5,19 @@ app = Flask(__name__)
 api = Api(app)
 
 DRESPONSE = {
+  'fulfillmentText': 'Good',
+  'outputContexts': [
+    {'parameters': {
+      '주소': '임시'}
+    }
+  ]
 }
 
 class ClientInfo(Resource):
     def post(self):
         data = request.get_json()
         print(data)
-        return ''
+        return DRESPONSE
 
 class HelloWorld(Resource):
     def get(self):
