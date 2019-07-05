@@ -8,7 +8,7 @@ DRESPONSE = {
   'fulfillmentText': 'Good',
   'outputContexts': [
     {'parameters': {
-      '주소': '임시'}
+      'address': '임시'}
     }
   ]
 }
