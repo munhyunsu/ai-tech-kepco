@@ -17,7 +17,9 @@ class ClientInfo(Resource):
     def post(self):
         data = request.get_json()
         print(data)
-        return DRESPONSE
+        res = DRESPONSE
+        res['outputContexts']['name'] = data['outputContexts']['name']
+        return res
 
 class HelloWorld(Resource):
     def get(self):
