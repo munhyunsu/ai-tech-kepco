@@ -32,6 +32,7 @@ class ClientInfo(Resource):
             action = data['queryResult']['intent']['endInteraction']
         except KeyError:
             action = False
+        print('here', action)
         if action:
             para_dict = orders.get(ide, dict())
             para_dict[customer] = paras
