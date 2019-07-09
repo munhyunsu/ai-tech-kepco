@@ -1,5 +1,8 @@
 # AI Tech. resource
 
+## RESTful Server
+- Dialogflow custom webhook server endpoint
+
 ## Source codes
 - Skeleton code for practice
 
