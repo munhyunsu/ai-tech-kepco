@@ -32,12 +32,11 @@ class ClientInfo(Resource):
             action = data['queryResult']['intent']['endInteraction']
         except KeyError:
             action = False
-        print('here', action)
+        print(action)
         if action:
             para_dict = orders.get(ide, dict())
             para_dict[customer] = paras
             orders[ide] = para_dict
-            print(orders)
             res = DRESPONSE
             res['fulfilmentText'] = '{\'Archive\': \'Ok\'}'
             with open(PICKLE, 'wb') as f:
@@ -54,7 +53,6 @@ class ClientInfo(Resource):
             res['fulfillmentText'] = res['fulfillmentText'].replace('"', '\'')
             res['outputContexts'] = [dict()]
             res['outputContexts'][0]['name'] = data['queryResult']['outputContexts'][0]['name']
-            print(res)
         return res
 
 class HelloWorld(Resource):
