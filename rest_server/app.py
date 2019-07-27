@@ -12,6 +12,7 @@ DRESPONSE = {
   'fulfillmentText': '',
 }
 
+
 if os.path.exists(PICKLE):
     with open(PICKLE, 'rb') as f:
         orders = pickle.load(f)
@@ -43,7 +44,6 @@ class ClientInfo(Resource):
                 pickle.dump(orders, f)
         else:
             res = DRESPONSE
-            #res['fulfillmentText'] = '아래 정보로 주문을 완료하였습니다.\n{0}'.format(orders[ide][customer])
             res['fulfillmentText'] = '아래 정보로 주문을 완료하였습니다.'
             for key in orders[ide][customer].keys():
                 if not key.endswith('.original'):
